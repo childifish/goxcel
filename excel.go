@@ -4,6 +4,7 @@ import (
 	"github.com/360EntSecGroup-Skylar/excelize"
 	"reflect"
 	"strconv"
+	"time"
 )
 
 /**
@@ -33,9 +34,21 @@ func ExcelStructs(v interface{},tableName string,filePath string)(err error) {
 	return table.StoreFile(filePath)
 }
 
+func ExcelStructsNotStore(v interface{})*ExcelHelper  {
+	table := InitTable("",v)
+	table.MultiInsert(v)
+	return table
+}
+
 func InitTable(tableName string, v interface{})*ExcelHelper  {
 	var e ExcelHelper
-	e.TableName = tableName
+	if tableName == ""{
+		name := reflect.ValueOf(v).Index(0).Type().Name()
+		e.TableName = name + strconv.Itoa(int(time.Now().Unix()))
+	}else {
+		e.TableName = tableName
+	}
+
 	switch reflect.TypeOf(v).Kind() {
 	case reflect.Slice:
 		typ := reflect.ValueOf(v).Index(0).Type()
