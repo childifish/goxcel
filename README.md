@@ -6,13 +6,17 @@
 - 学习成本低（大概）
 - 源码简单易懂
 
-##### 使用例（懒人版）
+### 使用例（懒人版）
 
 ```go
-goxcel.ExcelStructs(想储存的结构体数组,表名,储存路径,结构体)
+//标准版
+goxcel.ExcelStructs(想储存的结构体切片,表名,储存路径)
+
+//轻量版
+goxcel.ExcelStructsLite(想储存的结构体切片)
 ```
 
-##### 使用例（比较详细版）
+### 使用例（比较详细版）
 
 ```go
 go get github.com/childifish/goxcel
@@ -35,10 +39,10 @@ var students []Student
 
 这里我们写一个随机生成结构体用于初始化（下方的students是50个Student结构体，过程不做赘述）
 
-ExcelStructs 参数分别为希望储存的结构体切片，.xslx表名，保存路径，（将来会被优化掉的源结构体），返回一个error。
+ExcelStructs 参数分别为希望储存的结构体切片，.xslx表名，保存路径，~~（将来会被优化掉的源结构体）~~，返回一个error。
 
 ```go
-goxcel.ExcelStructs(students, "学生", "", Student{})
+goxcel.ExcelStructs(students, "学生", "")
 ```
 
 在根目录下创建了"学生.xslx"
@@ -69,3 +73,12 @@ type Student struct {
 | 56   | 3300  |
 
 字段类型目前支持数组，切片，结构体，具有嵌套结构的结构体（其他的俺还没试）；
+
+### 新增：
+
+##### 11/10：
+
+- 可选参数的ExcelStructsLite，
+- 不自动储存的ExcelStructsNotStore，
+- 定期删除DeleteTimer
+- 不知道算不算链式的链式api
