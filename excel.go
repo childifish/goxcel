@@ -15,12 +15,20 @@ import (
  * Update: 2020/11/10
  */
 
-//todo
+//todo11/10已完成
 /*
 *1.优化掉model
 *2.支持嵌套结构体
 *3.支持数组等更多类型(已经支持了。。)
 */
+//todo
+/*
+*1.更优秀的删除
+*2.性能优化
+*3.更好的封装
+*4.文档
+*5.
+ */
 
 type ExcelHelper struct {
 	Object interface{}
@@ -172,7 +180,7 @@ func (e *ExcelHelper) StoreFile(filepath string) *ExcelHelper {
 }
 
 func (e *ExcelHelper) DeleteTimer(t time.Duration)  {
-	fmt.Println("准备删除",e.FinalFile)
+	fmt.Printf("准备在%d秒后删除%s",t/1000000000,e.FinalFile)
 	time.AfterFunc(t,func(){
 		err := os.Remove(e.FinalFile)
 		if err != nil{
