@@ -1,7 +1,6 @@
 package goxcel
 
 import (
-	"fmt"
 	"github.com/360EntSecGroup-Skylar/excelize"
 	"reflect"
 	"strconv"
@@ -27,6 +26,7 @@ type ExcelHelper struct {
 	File *excelize.File
 }
 
+//ExcelStructs 参数分别为希望储存的结构体切片，.xslx表名，保存路径，（将来会被优化掉的源结构体），返回一个error
 func ExcelStructs(v interface{},tableName string,filePath string,model interface{})(err error) {
 	table := InitTable(tableName,model)
 	table.MultiInsert(v)
@@ -133,6 +133,5 @@ func index2Chara(i int)string  {
 
 func id2index(charaID int,i int)string  {
 	s := strconv.Itoa(i)
-	fmt.Println(index2Chara(charaID)+s)
 	return index2Chara(charaID)+s
 }
