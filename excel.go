@@ -1,7 +1,9 @@
 package goxcel
 
 import (
+	"fmt"
 	"github.com/360EntSecGroup-Skylar/excelize"
+	"os"
 	"reflect"
 	"strconv"
 	"time"
@@ -25,18 +27,41 @@ type ExcelHelper struct {
 	TableName string
 	TableHeader []string
 	File *excelize.File
+	FinalFile string
 }
 
 //ExcelStructs 参数分别为希望储存的结构体切片，.xslx表名，保存路径，（将来会被优化掉的源结构体），返回一个error
-func ExcelStructs(v interface{},tableName string,filePath string)(err error) {
+func ExcelStructs(v interface{},tableName string,filePath string)*ExcelHelper {
 	table := InitTable(tableName,v)
 	table.MultiInsert(v)
+	table.FinalFile = tableName+filePath
 	return table.StoreFile(filePath)
 }
 
+//ExcelStructsNotStore
 func ExcelStructsNotStore(v interface{})*ExcelHelper  {
 	table := InitTable("",v)
 	table.MultiInsert(v)
+	return table
+}
+
+//ExcelStructsLite
+func ExcelStructsLite(v interface{},para ...string)*ExcelHelper {
+	var tableName,filepath string
+	switch len(para) {
+	case 0:
+	case 1:
+		tableName = para[0]
+	case 2:
+		tableName = para[0]
+		filepath = para[1]
+	default:
+		fmt.Println("error in parra")
+		return nil
+	}
+	table := InitTable(tableName,v)
+	table.MultiInsert(v)
+	table.StoreFile(filepath)
 	return table
 }
 
@@ -51,8 +76,9 @@ func InitTable(tableName string, v interface{})*ExcelHelper  {
 
 	switch reflect.TypeOf(v).Kind() {
 	case reflect.Slice:
-		typ := reflect.ValueOf(v).Index(0).Type()
-		Num := reflect.ValueOf(v).Index(0).NumField()
+		base :=reflect.ValueOf(v).Index(0)
+		typ := base.Type()
+		Num := base.NumField()
 		for i := 0; i < Num; i++ {
 			var tag string
 			tag = typ.Field(i).Tag.Get("helper")
@@ -93,10 +119,6 @@ func (e *ExcelHelper) AnalyzeTableValue(v interface{})(field []string)   {
 	obj := reflect.ValueOf(v)
 	if obj.Kind() == reflect.Ptr {
 		obj = obj.Elem()
-	}
-	typ := reflect.TypeOf(v)
-	if typ.Kind() == reflect.Ptr {
-		typ = typ.Elem()
 	}
 	Num := obj.NumField()
 
@@ -140,13 +162,23 @@ func (e *ExcelHelper) MultiInsert(v interface{})*ExcelHelper {
 	return e
 }
 
-func (e *ExcelHelper) StoreFile(filepath string) error {
+func (e *ExcelHelper) StoreFile(filepath string) *ExcelHelper {
 	finalFile := filepath + e.TableName + ".xlsx"
 	if err := e.File.SaveAs(finalFile); err != nil {
-		println(err.Error())
-		return  err
+		fmt.Println(err.Error())
 	}
-	return nil
+	e.FinalFile = finalFile
+	return e
+}
+
+func (e *ExcelHelper) DeleteTimer(t time.Duration)  {
+	fmt.Println("准备删除",e.FinalFile)
+	time.AfterFunc(t,func(){
+		err := os.Remove(e.FinalFile)
+		if err != nil{
+			fmt.Println("unable 2 delete file:",e.FinalFile)
+		}
+	})
 }
 
 func index2Chara(i int)string  {
