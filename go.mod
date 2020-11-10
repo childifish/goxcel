@@ -1,4 +1,4 @@
-module excel_helper
+module github.com/childifish/goxcel
 
 go 1.14
 
