@@ -27,8 +27,8 @@ type ExcelHelper struct {
 }
 
 //ExcelStructs 参数分别为希望储存的结构体切片，.xslx表名，保存路径，（将来会被优化掉的源结构体），返回一个error
-func ExcelStructs(v interface{},tableName string,filePath string,model interface{})(err error) {
-	table := InitTable(tableName,model)
+func ExcelStructs(v interface{},tableName string,filePath string)(err error) {
+	table := InitTable(tableName,v)
 	table.MultiInsert(v)
 	return table.StoreFile(filePath)
 }
@@ -36,8 +36,20 @@ func ExcelStructs(v interface{},tableName string,filePath string,model interface
 func InitTable(tableName string, v interface{})*ExcelHelper  {
 	var e ExcelHelper
 	e.TableName = tableName
-	e.Object = v
-	e.AnalyzeTableHeader().InsertHeader()
+	switch reflect.TypeOf(v).Kind() {
+	case reflect.Slice:
+		typ := reflect.ValueOf(v).Index(0).Type()
+		Num := reflect.ValueOf(v).Index(0).NumField()
+		for i := 0; i < Num; i++ {
+			var tag string
+			tag = typ.Field(i).Tag.Get("helper")
+			if tag == ""{
+				tag  = typ.Field(i).Name
+			}
+			e.TableHeader = append(e.TableHeader,tag)
+		}
+	}
+	e.InsertHeader()
 	return &e
 }
 

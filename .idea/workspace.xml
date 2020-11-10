@@ -13,7 +13,6 @@
     <list default="true" id="043c1502-a4de-4924-9fa8-aaaf5f317239" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/excel.go" beforeDir="false" afterPath="$PROJECT_DIR$/excel.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/excel_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/excel_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +41,18 @@
     <property name="last_opened_file_path" value="$USER_HOME$/go/src/awesomeProject4" />
     <property name="settings.editor.selected.configurable" value="go.sdk" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Go Test.TestExcelHelper in github.com/childifish/goxcel (1)">
+    <configuration name="TestExcelHelper in github.com/childifish/goxcel (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="goxcel" />
+      <working_directory value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/childifish/goxcel" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestExcelHelper\E$" />
+      <method v="2" />
+    </configuration>
     <configuration name="TestExcelHelper in github.com/childifish/goxcel" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="goxcel" />
       <working_directory value="$PROJECT_DIR$" />
@@ -56,6 +66,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestExcelHelper in github.com/childifish/goxcel (1)" />
         <item itemvalue="Go Test.TestExcelHelper in github.com/childifish/goxcel" />
       </list>
     </recent_temporary>
@@ -84,22 +95,22 @@
       <screen x="0" y="0" width="1208" height="800" />
     </state>
     <state x="385" y="155" key="FileChooserDialogImpl/0.0.1208.800@0.0.1208.800" timestamp="1604969972617" />
-    <state width="1166" height="218" key="GridCell.Tab.0.bottom" timestamp="1604972325631">
+    <state width="1166" height="218" key="GridCell.Tab.0.bottom" timestamp="1604974302223">
       <screen x="0" y="0" width="1208" height="800" />
     </state>
-    <state width="1166" height="218" key="GridCell.Tab.0.bottom/0.0.1208.800@0.0.1208.800" timestamp="1604972325631" />
-    <state width="1166" height="218" key="GridCell.Tab.0.center" timestamp="1604972325631">
+    <state width="1166" height="218" key="GridCell.Tab.0.bottom/0.0.1208.800@0.0.1208.800" timestamp="1604974302223" />
+    <state width="1166" height="218" key="GridCell.Tab.0.center" timestamp="1604974302223">
       <screen x="0" y="0" width="1208" height="800" />
     </state>
-    <state width="1166" height="218" key="GridCell.Tab.0.center/0.0.1208.800@0.0.1208.800" timestamp="1604972325631" />
-    <state width="1166" height="218" key="GridCell.Tab.0.left" timestamp="1604972325631">
+    <state width="1166" height="218" key="GridCell.Tab.0.center/0.0.1208.800@0.0.1208.800" timestamp="1604974302223" />
+    <state width="1166" height="218" key="GridCell.Tab.0.left" timestamp="1604974302223">
       <screen x="0" y="0" width="1208" height="800" />
     </state>
-    <state width="1166" height="218" key="GridCell.Tab.0.left/0.0.1208.800@0.0.1208.800" timestamp="1604972325631" />
-    <state width="1166" height="218" key="GridCell.Tab.0.right" timestamp="1604972325631">
+    <state width="1166" height="218" key="GridCell.Tab.0.left/0.0.1208.800@0.0.1208.800" timestamp="1604974302223" />
+    <state width="1166" height="218" key="GridCell.Tab.0.right" timestamp="1604974302223">
       <screen x="0" y="0" width="1208" height="800" />
     </state>
-    <state width="1166" height="218" key="GridCell.Tab.0.right/0.0.1208.800@0.0.1208.800" timestamp="1604972325631" />
+    <state width="1166" height="218" key="GridCell.Tab.0.right/0.0.1208.800@0.0.1208.800" timestamp="1604974302223" />
     <state x="106" y="44" key="SettingsEditor" timestamp="1604972082895">
       <screen x="0" y="0" width="1208" height="800" />
     </state>
