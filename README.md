@@ -82,3 +82,4 @@ type Student struct {
 - 不自动储存的ExcelStructsNotStore，
 - 定期删除DeleteTimer
 - 不知道算不算链式的链式api
+- 更成熟的错误返回（
