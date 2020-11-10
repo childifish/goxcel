@@ -36,7 +36,7 @@ func TestExcelHelper_Analyze(t *testing.T) {
 }
 
 func TestIndex2Chara(t *testing.T) {
-	fmt.Println(Index2Chara(3))
+	fmt.Println(index2Chara(3))
 }
 
 func TestSlice(t *testing.T) {
