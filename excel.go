@@ -1,6 +1,7 @@
 package goxcel
 
 import (
+	"errors"
 	"fmt"
 	"github.com/360EntSecGroup-Skylar/excelize"
 	"os"
@@ -36,6 +37,7 @@ type ExcelHelper struct {
 	TableHeader []string
 	File *excelize.File
 	FinalFile string
+	Err error
 }
 
 //ExcelStructs 参数分别为希望储存的结构体切片，.xslx表名，保存路径，（将来会被优化掉的源结构体），返回一个error
@@ -65,7 +67,7 @@ func ExcelStructsLite(v interface{},para ...string)*ExcelHelper {
 		filepath = para[1]
 	default:
 		fmt.Println("error in parra")
-		return nil
+		return &ExcelHelper{Err: errors.New("error in parra")}
 	}
 	table := InitTable(tableName,v)
 	table.MultiInsert(v)
@@ -174,6 +176,7 @@ func (e *ExcelHelper) StoreFile(filepath string) *ExcelHelper {
 	finalFile := filepath + e.TableName + ".xlsx"
 	if err := e.File.SaveAs(finalFile); err != nil {
 		fmt.Println(err.Error())
+		e.Err = err
 	}
 	e.FinalFile = finalFile
 	return e
@@ -184,9 +187,14 @@ func (e *ExcelHelper) DeleteTimer(t time.Duration)  {
 	time.AfterFunc(t,func(){
 		err := os.Remove(e.FinalFile)
 		if err != nil{
+			e.Err = err
 			fmt.Println("unable 2 delete file:",e.FinalFile)
 		}
 	})
+}
+
+func (e *ExcelHelper)Error()error  {
+	return e.Err
 }
 
 func index2Chara(i int)string  {
