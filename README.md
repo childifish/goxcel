@@ -1,6 +1,6 @@
 # goxcel📑
 
-幼儿园小朋友也能轻松使用的golang structs -->.xslx小工具
+幼儿园小朋友也能轻松使用的golang structs -->.xlsx小工具
 
 - 使用方便
 - 学习成本低（大概）
@@ -39,13 +39,13 @@ var students []Student
 
 这里我们写一个随机生成结构体用于初始化（下方的students是50个Student结构体，过程不做赘述）
 
-ExcelStructs 参数分别为希望储存的结构体切片，.xslx表名，保存路径，~~（将来会被优化掉的源结构体）~~，返回一个error。
+ExcelStructs 参数分别为希望储存的结构体切片，.xlsx表名，保存路径，~~（将来会被优化掉的源结构体）~~，返回一个error。
 
 ```go
 goxcel.ExcelStructs(students, "学生", "")
 ```
 
-在根目录下创建了"学生.xslx"
+在根目录下创建了"学生.xlsx"
 
 | StuName | StuNum |
 | ------- | ------ |

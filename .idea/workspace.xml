@@ -13,6 +13,7 @@
     <list default="true" id="043c1502-a4de-4924-9fa8-aaaf5f317239" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/excel.go" beforeDir="false" afterPath="$PROJECT_DIR$/excel.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,5 +152,9 @@
       <screen x="0" y="0" width="1208" height="800" />
     </state>
     <state x="106" y="44" key="SettingsEditor/0.0.1208.800@0.0.1208.800" timestamp="1604972082895" />
+    <state x="3222" y="252" width="596" height="536" key="find.popup" timestamp="1605014364374">
+      <screen x="2560" y="0" width="1920" height="1040" />
+    </state>
+    <state x="3222" y="252" width="596" height="536" key="find.popup/0.0.1208.800/2560.0.1920.1040@2560.0.1920.1040" timestamp="1605014364374" />
   </component>
 </project>

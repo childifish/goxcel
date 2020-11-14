@@ -40,11 +40,11 @@ type ExcelHelper struct {
 	Err error
 }
 
-//ExcelStructs 参数分别为希望储存的结构体切片，.xslx表名，保存路径，（将来会被优化掉的源结构体），返回一个error
+//ExcelStructs 参数分别为希望储存的结构体切片，.xlsx表名，保存路径，（将来会被优化掉的源结构体），返回一个error
 func ExcelStructs(v interface{},tableName string,filePath string)*ExcelHelper {
 	table := InitTable(tableName,v)
 	table.MultiInsert(v)
-	table.FinalFile = tableName+filePath
+	table.FinalFile = tableName+filePath+".xlsx"
 	return table.StoreFile(filePath)
 }
 
