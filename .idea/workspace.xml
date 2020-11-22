@@ -12,8 +12,8 @@
   <component name="ChangeListManager">
     <list default="true" id="043c1502-a4de-4924-9fa8-aaaf5f317239" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/excel.go" beforeDir="false" afterPath="$PROJECT_DIR$/excel.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/excel_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/excel_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,11 +39,11 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/go/src/awesomeProject4" />
-    <property name="settings.editor.selected.configurable" value="go.sdk" />
+    <property name="last_opened_file_path" value="$USER_HOME$/go/src/randgom" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="Go Test.TestExcelStructsLite in github.com/childifish/goxcel (2)">
-    <configuration name="TestExcelHelper in github.com/childifish/goxcel (2)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Test.TestTst in github.com/childifish/goxcel">
+    <configuration name="Test1 in github.com/childifish/goxcel (2)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="goxcel" />
       <working_directory value="$PROJECT_DIR$" />
       <framework value="gotest" />
@@ -51,10 +51,10 @@
       <package value="github.com/childifish/goxcel" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestExcelHelper\E$" />
+      <pattern value="^\QTest1\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestExcelStructsLite in github.com/childifish/goxcel (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="Test1 in github.com/childifish/goxcel (3)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="goxcel" />
       <working_directory value="$PROJECT_DIR$" />
       <framework value="gotest" />
@@ -62,10 +62,10 @@
       <package value="github.com/childifish/goxcel" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestExcelStructsLite\E$" />
+      <pattern value="^\QTest1\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestExcelStructsLite in github.com/childifish/goxcel (2)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="Test1 in github.com/childifish/goxcel (4)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="goxcel" />
       <working_directory value="$PROJECT_DIR$" />
       <framework value="gotest" />
@@ -73,10 +73,10 @@
       <package value="github.com/childifish/goxcel" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestExcelStructsLite\E$" />
+      <pattern value="^\QTest1\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestExcelStructsLite in github.com/childifish/goxcel" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="Test1 in github.com/childifish/goxcel (5)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="goxcel" />
       <working_directory value="$PROJECT_DIR$" />
       <framework value="gotest" />
@@ -84,10 +84,10 @@
       <package value="github.com/childifish/goxcel" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestExcelStructsLite\E$" />
+      <pattern value="^\QTest1\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestExcelStructsNotStore in github.com/childifish/goxcel" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestTst in github.com/childifish/goxcel" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="goxcel" />
       <working_directory value="$PROJECT_DIR$" />
       <framework value="gotest" />
@@ -95,16 +95,16 @@
       <package value="github.com/childifish/goxcel" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestExcelStructsNotStore\E$" />
+      <pattern value="^\QTestTst\E$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.TestExcelStructsLite in github.com/childifish/goxcel (2)" />
-        <item itemvalue="Go Test.TestExcelHelper in github.com/childifish/goxcel (2)" />
-        <item itemvalue="Go Test.TestExcelStructsLite in github.com/childifish/goxcel (1)" />
-        <item itemvalue="Go Test.TestExcelStructsLite in github.com/childifish/goxcel" />
-        <item itemvalue="Go Test.TestExcelStructsNotStore in github.com/childifish/goxcel" />
+        <item itemvalue="Go Test.TestTst in github.com/childifish/goxcel" />
+        <item itemvalue="Go Test.Test1 in github.com/childifish/goxcel (5)" />
+        <item itemvalue="Go Test.Test1 in github.com/childifish/goxcel (4)" />
+        <item itemvalue="Go Test.Test1 in github.com/childifish/goxcel (3)" />
+        <item itemvalue="Go Test.Test1 in github.com/childifish/goxcel (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -128,30 +128,37 @@
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
-    <state x="385" y="155" key="FileChooserDialogImpl" timestamp="1604969972617">
-      <screen x="0" y="0" width="1208" height="800" />
+    <state x="3019" y="167" key="FileChooserDialogImpl" timestamp="1605339999358">
+      <screen x="2560" y="0" width="1440" height="860" />
     </state>
     <state x="385" y="155" key="FileChooserDialogImpl/0.0.1208.800@0.0.1208.800" timestamp="1604969972617" />
-    <state width="1166" height="218" key="GridCell.Tab.0.bottom" timestamp="1604978418644">
+    <state x="388" y="155" key="FileChooserDialogImpl/0.0.1218.800/2560.0.1440.860@0.0.1218.800" timestamp="1605334476800" />
+    <state x="3019" y="167" key="FileChooserDialogImpl/0.0.1218.800/2560.0.1440.860@2560.0.1440.860" timestamp="1605339999358" />
+    <state width="1166" height="213" key="GridCell.Tab.0.bottom" timestamp="1605425880513">
       <screen x="0" y="0" width="1208" height="800" />
     </state>
-    <state width="1166" height="218" key="GridCell.Tab.0.bottom/0.0.1208.800@0.0.1208.800" timestamp="1604978418644" />
-    <state width="1166" height="218" key="GridCell.Tab.0.center" timestamp="1604978418644">
+    <state width="1166" height="213" key="GridCell.Tab.0.bottom/0.0.1208.800@0.0.1208.800" timestamp="1605425880513" />
+    <state width="900" height="293" key="GridCell.Tab.0.bottom/0.0.1218.800/2560.0.1920.1040@2560.0.1920.1040" timestamp="1605418061781" />
+    <state width="1166" height="213" key="GridCell.Tab.0.center" timestamp="1605425880513">
       <screen x="0" y="0" width="1208" height="800" />
     </state>
-    <state width="1166" height="218" key="GridCell.Tab.0.center/0.0.1208.800@0.0.1208.800" timestamp="1604978418644" />
-    <state width="1166" height="218" key="GridCell.Tab.0.left" timestamp="1604978418644">
+    <state width="1166" height="213" key="GridCell.Tab.0.center/0.0.1208.800@0.0.1208.800" timestamp="1605425880513" />
+    <state width="900" height="293" key="GridCell.Tab.0.center/0.0.1218.800/2560.0.1920.1040@2560.0.1920.1040" timestamp="1605418061781" />
+    <state width="1166" height="213" key="GridCell.Tab.0.left" timestamp="1605425880513">
       <screen x="0" y="0" width="1208" height="800" />
     </state>
-    <state width="1166" height="218" key="GridCell.Tab.0.left/0.0.1208.800@0.0.1208.800" timestamp="1604978418644" />
-    <state width="1166" height="218" key="GridCell.Tab.0.right" timestamp="1604978418644">
+    <state width="1166" height="213" key="GridCell.Tab.0.left/0.0.1208.800@0.0.1208.800" timestamp="1605425880513" />
+    <state width="900" height="293" key="GridCell.Tab.0.left/0.0.1218.800/2560.0.1920.1040@2560.0.1920.1040" timestamp="1605418061781" />
+    <state width="1166" height="213" key="GridCell.Tab.0.right" timestamp="1605425880513">
       <screen x="0" y="0" width="1208" height="800" />
     </state>
-    <state width="1166" height="218" key="GridCell.Tab.0.right/0.0.1208.800@0.0.1208.800" timestamp="1604978418644" />
-    <state x="106" y="44" key="SettingsEditor" timestamp="1604972082895">
-      <screen x="0" y="0" width="1208" height="800" />
+    <state width="1166" height="213" key="GridCell.Tab.0.right/0.0.1208.800@0.0.1208.800" timestamp="1605425880513" />
+    <state width="900" height="293" key="GridCell.Tab.0.right/0.0.1218.800/2560.0.1920.1040@2560.0.1920.1040" timestamp="1605418061781" />
+    <state x="2728" y="57" key="SettingsEditor" timestamp="1605352001866">
+      <screen x="2560" y="0" width="1920" height="1040" />
     </state>
     <state x="106" y="44" key="SettingsEditor/0.0.1208.800@0.0.1208.800" timestamp="1604972082895" />
+    <state x="2728" y="57" key="SettingsEditor/0.0.1218.800/2560.0.1920.1040@2560.0.1920.1040" timestamp="1605352001866" />
     <state x="3222" y="252" width="596" height="536" key="find.popup" timestamp="1605014364374">
       <screen x="2560" y="0" width="1920" height="1040" />
     </state>

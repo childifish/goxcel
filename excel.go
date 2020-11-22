@@ -78,6 +78,11 @@ func ExcelStructsLite(v interface{},para ...string)*ExcelHelper {
 func InitTable(tableName string, v interface{})*ExcelHelper  {
 	var e ExcelHelper
 	if tableName == ""{
+		if reflect.ValueOf(v).Len() <1{
+			return &ExcelHelper{
+				Err:    errors.New("empty slice"),
+			}
+		}
 		name := reflect.ValueOf(v).Index(0).Type().Name()
 		e.TableName = name + strconv.Itoa(int(time.Now().Unix()))
 	}else {
@@ -86,6 +91,11 @@ func InitTable(tableName string, v interface{})*ExcelHelper  {
 
 	switch reflect.TypeOf(v).Kind() {
 	case reflect.Slice:
+		if reflect.ValueOf(v).Len() <1{
+			return &ExcelHelper{
+				Err:    errors.New("empty slice"),
+			}
+		}
 		base :=reflect.ValueOf(v).Index(0)
 		typ := base.Type()
 		Num := base.NumField()
@@ -139,7 +149,6 @@ func (e *ExcelHelper) AnalyzeTableValue(v interface{})(field []string)   {
 	return field
 }
 
-
 func (e *ExcelHelper) InsertHeader()*ExcelHelper  {
 	f := excelize.NewFile()
 	for i,v := range e.TableHeader{
@@ -160,6 +169,10 @@ func (e *ExcelHelper) Insert(index int,v interface{})*ExcelHelper  {
 func (e *ExcelHelper) MultiInsert(v interface{})*ExcelHelper {
 	switch reflect.TypeOf(v).Kind() {
 	case reflect.Slice:
+		if reflect.ValueOf(v).Len() <1{
+			e.Err = errors.New("empty slice")
+			return e
+		}
 		s := reflect.ValueOf(v)
 		for i := 0; i < s.Len(); i++ {
 			elem := s.Index(i)
@@ -173,6 +186,9 @@ func (e *ExcelHelper) MultiInsert(v interface{})*ExcelHelper {
 }
 
 func (e *ExcelHelper) StoreFile(filepath string) *ExcelHelper {
+	if e.Err!=nil{
+		return e
+	}
 	finalFile := filepath + e.TableName + ".xlsx"
 	if err := e.File.SaveAs(finalFile); err != nil {
 		fmt.Println(err.Error())
